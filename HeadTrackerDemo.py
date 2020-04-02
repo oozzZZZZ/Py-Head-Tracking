@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import cv2 #OpenCV:画像処理系ライブラリ
 import dlib #機械学習系ライブラリ
 import imutils #OpenCVの補助
@@ -8,7 +11,7 @@ import numpy as np
 # VideoCapture オブジェクトを取得します
 DEVICE_ID = 0 #ID 0は標準web cam
 capture = cv2.VideoCapture(DEVICE_ID)#dlibの学習済みデータの読み込み
-predictor_path = "/shape_predictor_68_face_landmarks.dat"
+predictor_path = "shape_predictor_68_face_landmarks.dat"
 
 print("[INFO] loading facial landmark predictor...")
 detector = dlib.get_frontal_face_detector() #顔検出器の呼び出し。ただ顔だけを検出する。
